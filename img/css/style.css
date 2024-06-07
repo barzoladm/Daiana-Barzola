@@ -1,0 +1,109 @@
+body {
+    font-family: "Cambria Math", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    
+}
+header h1 {
+    font-family: "Cambria Math", serif; 
+    font-size: 36px; 
+    color: #333; 
+}
+header {
+    background-color: #e9bfe9;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    background-color: #666;
+    color: #f1d9ee;
+    padding: 10px;
+    text-align: center;
+}
+nav a {
+    font-size: 25px;
+    text-decoration: none; 
+    color: #670977; 
+    padding: 5px 10px;
+}
+nav a img {
+    width: 130px; 
+    height: 40px;
+    vertical-align: right; 
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background-color: #fff;
+}
+
+footer {
+    background-color: #95b879;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    margin-top: 50px; 
+}
+
+.container img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 20px; 
+}
+
+#productos-disponibles {
+    margin-top: 50px;
+}
+
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.producto h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.producto p {
+    color: #666;
+}
+.productos-container {
+    display: flex; 
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.producto {
+    width: 250px; 
+    padding: 20px; 
+    text-align: center; 
+    border: 1px solid #f3c8c8; 
+}
