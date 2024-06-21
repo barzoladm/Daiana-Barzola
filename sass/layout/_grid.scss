@@ -1,0 +1,14 @@
+
+.container {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  .productos-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  

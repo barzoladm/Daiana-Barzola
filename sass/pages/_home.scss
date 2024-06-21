@@ -1,0 +1,26 @@
+
+#productos-disponibles {
+    margin-top: 50px;
+  }
+  
+  .producto {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid $color-product-border;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  
+    h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+  
+    p {
+      color: $color-product-text;
+    }
+  }
+  

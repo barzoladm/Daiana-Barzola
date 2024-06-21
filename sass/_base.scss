@@ -1,0 +1,16 @@
+
+body {
+    font-family: $font-body;
+    margin: 0;
+    padding: 0;
+    background-color: $color-background;
+  }
+  
+  h1, h2 {
+    color: $color-h1-h2;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
