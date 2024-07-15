@@ -6,9 +6,14 @@
     <title>El Manantial SL</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<header>
-    <h1>El Manantial SL</h1>
+<body>
     <header>
+        <div class="menu-toggle">
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+            <div class="menu-bar"></div>
+        </div>
+        <h1>El Manantial SL</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
@@ -19,45 +24,49 @@
                     <img src="./img/instagram-icon.png" alt="Instagram">
                 </a></li>
             </ul>
-            <form action="/search" method="get">
-                <input type="search" name="q" placeholder="Buscar...">
+        <section class="search-section">
+            <form action="/search" method="get" class="search-form">
+                <input type="search" name="q" placeholder="Buscar..." class="search-input">
             </form>
+            <div id="searchResults"></div>
+        </section>
         </nav>
     </header>
-<div class="container">
-    <img src="./img/inicio de mi pagina.png" alt="">
-<hr>
-    <section id="productos-disponibles">
-        <h2>Mas vendidos</h2>
-        <div class="productos-container">
-            <div class="producto">
-                <img src="./img/budadia.png" alt="Lámpara de sal - Buda">
-                <h3>Lámpara de sal - Buda</h3>
-                <p>🪔✨Las lámparas de sal son una hermosa opción para decorar tu rincón favorito.✨🪔</p>
-                <a href="../pages/producto1.html">Ver más</a>
-            </div>
-        
-            <div class="producto">
-                <img src="./img/sahumerios.png" alt="Sahumerios">
-                <h3>Sahumerios</h3>
-                <p>✨NUEVA presentación Sahumerios / Línea Artesano x5✨</p>
-                <p>  </p>
-                <a href="./pages/producto2.html">Ver más</a>
-            </div>
+    
+    <div class="container">
+        <img src="./img/inicio.png" alt="">
+        <hr>
+        <section id="productos-disponibles">
+            <h2>Mas vendidos</h2>
+            <div class="productos-container">
+                <div class="producto">
+                    <img src="./img/budadia.png" alt="Lámpara de sal - Buda">
+                    <h3>Lámpara de sal - Buda</h3>
+                    <p>🪔✨Las lámparas de sal son una hermosa opción para decorar tu rincón favorito.✨🪔</p>
+                    <a href="./pages/producto1.html">Ver más</a>
+                </div>
+                
+                <div class="producto">
+                    <img src="./img/sahumerios.png" alt="Sahumerios">
+                    <h3>Sahumerios</h3>
+                    <p>✨NUEVA presentación Sahumerios / Línea Artesano x5✨</p>
+                    <a href="./pages/producto2.html">Ver más</a>
+                </div>
 
-            <div class="producto">
-                <img src="./img/cuarzo.png" alt="Collar cuarzo cristal">
-                <h3>Collar cuarzo cristal</h3>
-                <p>✨NUEVos collares✨</p>
-                <p>  </p>
-                <a href="./pages/producto3.html">Ver más</a>
+                <div class="producto">
+                    <img src="./img/cuarzo.png" alt="Collar cuarzo cristal">
+                    <h3>Collar cuarzo cristal</h3>
+                    <p>✨NUEVos collares✨</p>
+                    <a href="./pages/producto3.html">Ver más</a>
+                </div>
             </div>
-        </div>
-</div>
+        </section>
+    </div>
 
-<footer>
-    <p>Derechos Reservados &copy; 2024</p>
-    <a href="#">Volver al Inicio</a> 
-</footer>
+    <footer>
+        <p>Derechos Reservados &copy; 2024</p>
+        <a href="#">Volver al Inicio</a> 
+    </footer>
+    <script src="./js/menu.js"></script>
 </body>
 </html>
