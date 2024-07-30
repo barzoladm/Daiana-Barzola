@@ -24,12 +24,13 @@
                     <img src="./img/instagram-icon.png" alt="Instagram">
                 </a></li>
             </ul>
-        <section class="search-section">
-            <form action="/search" method="get" class="search-form">
-                <input type="search" name="q" placeholder="Buscar..." class="search-input">
-            </form>
-            <div id="searchResults"></div>
-        </section>
+            <section class="search-section">
+                <form action="/search" method="get" class="search-form">
+                    <input type="search" name="q" id="search-input" placeholder="Buscar..." class="search-input">
+                    <button type="button" id="search-button" class="search-button">Buscar</button>
+                </form>
+                <div id="searchResults"></div>
+            </section>
         </nav>
     </header>
     
@@ -38,7 +39,7 @@
         <hr>
         <section id="productos-disponibles">
             <h2>Mas vendidos</h2>
-            <div class="productos-container">
+            <div class="productos-container" id="grid-container">
                 <div class="producto">
                     <img src="./img/budadia.png" alt="Lámpara de sal - Buda">
                     <h3>Lámpara de sal - Buda</h3>
@@ -68,5 +69,6 @@
         <a href="#">Volver al Inicio</a> 
     </footer>
     <script src="./js/menu.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
