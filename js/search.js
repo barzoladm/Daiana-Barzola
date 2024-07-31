@@ -36,3 +36,4 @@ searchInput.addEventListener('input', function() {
         searchResults.innerHTML = '<p>No se encontraron productos.</p>';
     }
 });
+mostrarProductos(filteredProducts)

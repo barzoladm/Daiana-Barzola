@@ -9,6 +9,7 @@ const productos = [
     { id: 7, nombre: "Lampara de Sal", descripcion: "Descripción breve de Lampara de Sal...", img: "../img/lamparasdesal.png", link: "../pages/producto7.html" }
 ];
 
+// Función para mostrar los productos en la grilla
 function mostrarProductos(productos) {
     const gridContainer = document.getElementById('grid-container');
     gridContainer.innerHTML = ''; 
@@ -50,5 +51,3 @@ document.getElementById('search-form').addEventListener('submit', function(event
     event.preventDefault();
     filtrarProductos();
 });
-
-mostrarProductos(productos);
