@@ -9,25 +9,29 @@ const productos = [
     { id: 7, nombre: "Lampara de Sal", descripcion: "Descripción breve de Lampara de Sal...", img: "../img/lamparasdesal.png", link: "../pages/producto7.html" }
 ];
 
-// Función para mostrar los productos en la grilla
 function mostrarProductos(productos) {
     const gridContainer = document.getElementById('grid-container');
-    gridContainer.innerHTML = ''; // Limpiar la grilla
+    gridContainer.innerHTML = ''; 
 
-    productos.forEach(producto => {
-        const div = document.createElement('div');
-        div.className = 'producto';
-        div.innerHTML = `
-            <img src="${producto.img}" alt="${producto.nombre}">
-            <h3>${producto.nombre}</h3>
-            <p>${producto.descripcion}</p>
-            <a href="${producto.link}" target="_blank">Ver más</a>
-        `;
-        gridContainer.appendChild(div);
-    });
+    if (productos.length === 0) {
+        const mensaje = document.createElement('p');
+        mensaje.textContent = "Producto no encontrado";
+        gridContainer.appendChild(mensaje);
+    } else {
+        productos.forEach(producto => {
+            const div = document.createElement('div');
+            div.className = 'producto';
+            div.innerHTML = `
+                <img src="${producto.img}" alt="${producto.nombre}">
+                <h3>${producto.nombre}</h3>
+                <p>${producto.descripcion}</p>
+                <a href="${producto.link}" target="_blank">Ver más</a>
+            `;
+            gridContainer.appendChild(div);
+        });
+    }
 }
 
-// Función para filtrar los productos según la búsqueda
 function filtrarProductos() {
     const termino = document.getElementById('search-input').value.toLowerCase();
     const productosFiltrados = productos.filter(producto => 
@@ -36,18 +40,15 @@ function filtrarProductos() {
     );
     mostrarProductos(productosFiltrados);
 }
-
-// Event listener para el input de búsqueda
+document.addEventListener('DOMContentLoaded', function() {
+});
 document.getElementById('search-input').addEventListener('input', filtrarProductos);
 
-// Event listener para el botón de búsqueda
 document.getElementById('search-button').addEventListener('click', filtrarProductos);
 
-// Event listener para el submit del formulario
 document.getElementById('search-form').addEventListener('submit', function(event) {
     event.preventDefault();
     filtrarProductos();
 });
 
-// Mostrar todos los productos al cargar la página
 mostrarProductos(productos);

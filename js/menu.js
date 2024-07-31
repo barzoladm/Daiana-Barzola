@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('nav');
+    var menuToggle = document.querySelector('.menu-toggle');
+    var menu = document.querySelector('nav');
 
-    menuToggle.addEventListener('click', function() {
-        this.classList.toggle('active');
-        nav.classList.toggle('active');
-    });
+    if (menuToggle && menu) {
+        menuToggle.addEventListener('click', function() {
+            menu.classList.toggle('active');
+        });
+    }
 });

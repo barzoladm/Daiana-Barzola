@@ -10,18 +10,16 @@
     <header>
         <h1>Productos Disponibles</h1>
         <nav>
-            <ul>
+            <ul class="nav-list">
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./proddisponibles.html">Productos disponibles</a></li>
                 <li><a href="./contacto.html">Contacto</a></li>
                 <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                <li><a href="https://www.instagram.com/elmanantialsl" target="_blank">
-                    <img src="../img/instagram-icon.png" alt="Instagram">
-                </a></li>
+                <li><a href="./redes.html">Nuestras redes</a></li>
             </ul>
         </nav>
         <section class="search-section">
-            <form id="search-form" class="search-form">
+            <form id="search-form" action="/search" method="get" class="search-form">
                 <input type="search" name="q" id="search-input" placeholder="Buscar..." class="search-input">
                 <button type="button" id="search-button" class="search-button">Buscar</button>
             </form>
@@ -30,54 +28,68 @@
     </header>
 
     <main class="container">
-        <div class="productos-container" id="grid-container">
+        <div class="productos-container">
             <div class="producto">
-                <img src="../img/budadia.png" alt="Lámpara de sal Buda">
+                <a href="./producto1.html">
+                    <img src="../img/budadia.png" alt="Lámpara de sal Buda">
+                </a>
                 <h3>Lámpara de sal Buda</h3>
                 <p>Descripción breve de la lámpara de sal Buda...</p>
-                <a href="./producto1.html" target="_blank">Ver más</a>
+                <a href="./producto1.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/sahumerios.png" alt="Sahumerios">
+                <a href="../pages/producto2.html">
+                    <img src="../img/sahumerios.png" alt="Sahumerios">
+                </a>
                 <h3>Sahumerios</h3>
                 <p>Descripción breve de los sahumerios...</p>
-                <a href="../pages/producto2.html" target="_blank">Ver más</a>
+                <a href="../pages/producto2.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/cuarzo.png" alt="Collar de cuarzo">
+                <a href="../pages/producto3.html">
+                    <img src="../img/cuarzo.png" alt="Collar de cuarzo">
+                </a>
                 <h3>Collar de cuarzo</h3>
                 <p>Descripción breve del collar de cuarzo...</p>
-                <a href="../pages/producto3.html" target="_blank">Ver más</a>
+                <a href="../pages/producto3.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/esferas.png" alt="Esferas mágicas Premium x4">
-                <h3>Esferas mágicas</h3>
-                <p>Descripción breve del collar de Esferas mágicas...</p>
-                <a href="../pages/producto4.html" target="_blank">Ver más</a>
+                <a href="../pages/producto4.html">
+                    <img src="../img/esferas.png" alt="Esferas magicas Premium x4">
+                </a>
+                <h3>Esferas magicas</h3>
+                <p>Descripción breve de Esferas magicas...</p>
+                <a href="../pages/producto4.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/hornivela.png" alt="Hornivela">
+                <a href="../pages/producto5.html">
+                    <img src="../img/hornivela.png" alt="Hornivela">
+                </a>
                 <h3>Hornitos, velas y esencias</h3>
-                <p>Descripción breve del collar de hornitos, velas...</p>
-                <a href="../pages/producto5.html" target="_blank">Ver más</a>
+                <p>Descripción breve de hornitos, velas...</p>
+                <a href="../pages/producto5.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/portasahu.png" alt="Portasahu">
+                <a href="../pages/producto6.html">
+                    <img src="../img/portasahu.png" alt="Portasahu">
+                </a>
                 <h3>Porta Sahumerio</h3>
                 <p>Descripción breve de Portasahumerios...</p>
-                <a href="../pages/producto6.html" target="_blank">Ver más</a>
+                <a href="../pages/producto6.html">Ver más</a>
             </div>
 
             <div class="producto">
-                <img src="../img/lamparasdesal.png" alt="Lampara de Sal">
+                <a href="../pages/producto7.html">
+                    <img src="../img/lamparasdesal.png" alt="Lampara de Sal">
+                </a>
                 <h3>Lampara de Sal</h3>
                 <p>Descripción breve de Lampara de Sal...</p>
-                <a href="../pages/producto7.html" target="_blank">Ver más</a>
+                <a href="../pages/producto7.html">Ver más</a>
             </div>
         </div>
     </main>
@@ -85,7 +97,7 @@
     <footer>
         <a href="../index.html">Volver al Inicio</a>
     </footer>
-    <script src="../js/menu.js"></script>
-    <script src="../js/script.js"></script>
+    <script src="./js/menu.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>

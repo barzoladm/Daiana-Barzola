@@ -3,18 +3,24 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
-    background-image: url('inicio de mi pagina.png');
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda el área del fondo */
+    background-image: url('inicio.png');
+    
     background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
     background-position: center center; /* Centra la imagen de fondo */
     background-color: #f0f0f0; /* Color de fondo de respaldo */
-    font-family: Arial, sans-serif; /* Tipo de letra para el texto */
-    color: #333; /* Color de texto para el contenido */
+    color: #502b2b; /* Color de texto para el contenido */
     padding: 20px;
     
 }
+inicio-img {
+    width: 50%; /* Ajusta el tamaño según sea necesario */
+    max-width: 100px; /* Tamaño máximo para asegurar que no se haga muy grande */
+    height: auto; /* Mantiene la proporción de la imagen */
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
 .contenido {
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
     background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente para el contenido */
     padding: 20px;
@@ -68,6 +74,8 @@ footer {
 
 h1, h2 {
     color: #333;
+    font-family: "Cambria", serif;
+    font-style: oblique;
 }
 
 ul {
@@ -160,14 +168,77 @@ nav ul li {
     display: inline-block;
     margin-top: 10px;
 }
-/* 
 
-header nav ul {
+/* General styling for the navigation list */
+.nav-list {
     display: flex;
-    list-style: none;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
     padding: 0;
     margin: 0;
-} */
+    background-color: #333;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Increased padding for better size */
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; /* Center align the text and icons */
+    height: 100%; /* Ensure the link takes up the full height of the parent */
+}
+
+.nav-list a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+
+
+/* Specific styling for the Instagram icon */
+.instagram-icon {
+    width: 50px;
+    height: 50px;
+}
+/* Social media list styling */
+.social-media-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-media-list li {
+    margin: 0;
+}
+
+.social-media-list a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-media-list a:hover {
+    color: #555;
+}
+
+.social-icon {
+    width: 204px;
+    height: 204px;
+}
+
 
 header nav ul li {
     margin: 0 15px; 
@@ -268,7 +339,7 @@ header nav form input[type="search"]::placeholder {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Cambria Math", sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -283,6 +354,14 @@ body {
     }
 
 }
+
+.producto a img {
+    display: block;
+    cursor: pointer;
+    width: 100%; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
 
 .video-container {
     position: relative;
@@ -349,4 +428,130 @@ body {
 
 .search-button:hover {
     background-color: #0056b3;
+}
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp img {
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #b9e7e2;
+}
+.nuestras-redes {
+    position: relative;
+}
+
+.horarios {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+#toggle-horarios {
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-horarios:hover {
+    background-color: #128C7E;
+}
+
+#lista-horarios {
+    margin-top: 5px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    list-style: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#lista-horarios.hidden {
+    display: none;
+}
+
+#lista-horarios li {
+    padding: 5px 0;
+}
+.hidden {
+    display: none;
+}
+.estado-tienda {
+    font-size: 24px; /* Ajusta el tamaño según sea necesario */
+    font-weight: bold; /* Opcional: hacer el texto en negrita */
+    color: rgb(137, 65, 155); /* Cambia el color según sea necesario */
+}
+
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #555;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+}
+
+iframe {
+    width: 100%;
+    border: none;
+    margin: 20px 0;
+}
+
+#formulario-contacto h2 {
+    text-align: center;
 }
