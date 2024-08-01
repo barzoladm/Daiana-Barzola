@@ -67,7 +67,14 @@ document.addEventListener('DOMContentLoaded', function() {
     estadoTienda();
 });
 
-document.getElementById('mobile-menu').addEventListener('click', function() {
-    const nav = document.querySelector('.nav-list');
-    nav.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            const nav = document.querySelector('.nav-list');
+            nav.classList.toggle('active');
+        });
+    } else {
+        console.error('Element with ID "mobile-menu" not found.');
+    }
 });

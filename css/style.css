@@ -116,11 +116,11 @@ nav ul li {
 .producto p {
     color: #666;
 }
-.productos-container {
+/* .productos-container {
     display: flex; 
     justify-content: space-around; 
     align-items: center; 
-}
+} */
 
 
 
@@ -166,36 +166,6 @@ nav ul li {
     font-weight: bold;
     display: inline-block;
     margin-top: 10px;
-}
-
-/* General styling for the navigation list */
-.nav-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #333;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 20px; 
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center; 
-    height: 100%; 
-}
-
-.nav-list a:hover {
-    background-color: #555;
-    border-radius: 5px;
 }
 
 
@@ -545,12 +515,43 @@ iframe {
 }
 
 
+/* General styling for the navigation list */
+/* .nav-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; 
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center; 
+    height: 100%; 
+} */
+
+.nav-list a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
 .nav-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .nav-list li {
@@ -561,37 +562,51 @@ iframe {
     color: #fff;
     text-decoration: none;
     padding: 10px;
-    display: block;
+    display: flex;
+    height: block;
 }
 
 .menu-toggle {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .menu-toggle .bar {
     height: 3px;
-    width: 25px;
+    width: 30px;
     background-color: #fff;
-    margin: 4px 0;
+    margin: 5px 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 568px) {
     .nav-list {
         display: none;
         flex-direction: column;
         width: 100%;
+        position: absolute;
+        top: 60px; /* Ajusta según la altura del menú toggle */
+        left: 0;
+        background-color: #333;
+    }
+    .nav-list.active {
+        display: flex;
     }
 
     .nav-list li {
         text-align: center;
+    }
+    .nav-list li a {
+        font-size: 14px; /* Tamaño de fuente más pequeño para pantallas pequeñas */
+        padding: 15px; /* Espaciado ajustado para dispositivos móviles */
     }
 
     .menu-toggle {
         display: flex;
     }
 }
-.nav-list.active {
-    display: flex;
-}
+
+
