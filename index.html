@@ -3,42 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Manantial SL</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>El Manantial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="menu-toggle">
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
-            <div class="menu-bar"></div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">El Manantial</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/proddisponibles.html">Productos disponibles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/nosotros.html">Sobre nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./pages/redes.html">Nuestras redes</a>
+                </li>
+            </ul>
         </div>
-        <h1>El Manantial SL</h1>
-        <nav>
-            <nav>
-                <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="./pages/proddisponibles.html">Productos disponibles</a></li>
-                    <li><a href="./pages/contacto.html">Contacto</a></li>
-                    <li><a href="./pages/nosotros.html">Sobre nosotros</a></li>
-                    <li><a href="./pages/redes.html">Nuestras redes</a></li>
-                </ul>
-            </nav>
-            <section class="search-section">
-                <form action="/search" method="get" class="search-form">
-                    <input type="search" name="q" id="search-input" placeholder="Buscar..." class="search-input">
-                    <button type="button" id="search-button" class="search-button">Buscar</button>
-                </form>
-                <div id="searchResults"></div>
-            </section>
-        </nav>
-    </header>
-    
+    </nav>
+
     <div class="container">
         <img src="./img/inicio.png" alt="" class="inicio-img">
         <section id="productos-disponibles">
@@ -72,6 +67,9 @@
         <p>Derechos Reservados &copy; 2024</p>
         <a href="#">Volver al Inicio</a> 
     </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="./js/menu.js"></script>
     <script src="./js/script.js"></script>
 </body>

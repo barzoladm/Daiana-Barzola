@@ -8,3 +8,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = document.getElementById('navbar-toggler');
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            const nav = document.getElementById('navbarNav');
+            nav.classList.toggle('show');
+        });
+    } else {
+        console.error('Element with ID "navbar-toggler" not found.');
+    }
+});

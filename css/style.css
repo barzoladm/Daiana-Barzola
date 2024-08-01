@@ -610,3 +610,10 @@ iframe {
 }
 
 
+.navbar {
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    font-size: 16px;
+}
