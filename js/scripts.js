@@ -69,5 +69,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.getElementById('mobile-menu').addEventListener('click', function() {
     const nav = document.querySelector('.nav-list');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    nav.classList.toggle('active');
 });

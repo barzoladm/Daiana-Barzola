@@ -51,8 +51,7 @@ document.getElementById('search-form').addEventListener('submit', function(event
     event.preventDefault();
     filtrarProductos();
 });
-
 document.getElementById('mobile-menu').addEventListener('click', function() {
     const nav = document.querySelector('.nav-list');
-    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    nav.classList.toggle('active');
 });
