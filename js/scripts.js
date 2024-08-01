@@ -66,3 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     estadoTienda();
 });
+document.getElementById('mobile-menu').addEventListener('click', function() {
+    const nav = document.querySelector('.nav-list');
+    nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+});
