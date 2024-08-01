@@ -63,3 +63,45 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Element with ID "mobile-menu" not found.');
     }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const searchButton = document.getElementById('search-button');
+    const searchInput = document.getElementById('search-input');
+    const resultados = document.getElementById('searchResults');
+
+    if (searchButton && searchInput && resultados) {
+        searchButton.addEventListener('click', function() {
+            filtrarProductos(searchInput.value);
+        });
+
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                filtrarProductos(searchInput.value);
+            }
+        });
+    }
+
+    function filtrarProductos(query) {
+        // Aquí puedes hacer la lógica para filtrar los productos
+        // Por simplicidad, vamos a usar un array de productos de ejemplo
+        const productos = [
+            { nombre: 'Producto 1' },
+            { nombre: 'Producto 2' },
+            { nombre: 'Producto 3' }
+        ];
+
+        const resultadosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(query.toLowerCase()));
+        mostrarProductos(resultadosFiltrados);
+    }
+
+    function mostrarProductos(productos) {
+        if (resultados) {
+            resultados.innerHTML = ''; // Limpia los resultados anteriores
+            productos.forEach(producto => {
+                resultados.innerHTML += `<div>${producto.nombre}</div>`;
+            });
+        } else {
+            console.error('Elemento #searchResults no encontrado');
+        }
+    }
+});

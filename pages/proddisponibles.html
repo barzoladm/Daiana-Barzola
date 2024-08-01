@@ -4,101 +4,143 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos Disponibles</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Productos Disponibles</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./proddisponibles.html">Productos disponibles</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                <li><a href="./redes.html">Nuestras redes</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand header-title" href="../index.html">El Manantial SL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proddisponibles.html">Productos disponibles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./redes.html">Nuestras redes</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <section class="search-section">
-            <form action="/search" method="get" class="search-form">
-                <input type="search" name="q" id="search-input" placeholder="Buscar..." class="search-input">
-                <button type="button" id="search-button" class="search-button">Buscar</button>
-            </form>
-            <div id="searchResults"></div>
-        </section>
     </header>
 
-    <main class="container">
-        <div class="productos-container">
-            <div class="producto">
-                <a href="./producto1.html">
-                    <img src="../img/budadia.png" alt="Lámpara de sal Buda">
-                </a>
-                <h3>Lámpara de sal Buda</h3>
-                <p>Descripción breve de la lámpara de sal Buda...</p>
-                <a href="./producto1.html">Ver más</a>
-            </div>
+    <section class="search-section">
+        <form action="/search" method="get" class="search-form">
+            <input type="search" name="q" id="search-input" placeholder="Buscar..." class="form-control search-input">
+            <button type="button" id="search-button" class="btn btn-outline-success search-button">Buscar</button>
+        </form>
+        <div id="searchResults"></div>
+    </section>
 
-            <div class="producto">
-                <a href="../pages/producto2.html">
-                    <img src="../img/sahumerios.png" alt="Sahumerios">
-                </a>
-                <h3>Sahumerios</h3>
-                <p>Descripción breve de los sahumerios...</p>
-                <a href="../pages/producto2.html">Ver más</a>
+    <main class="container mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="./producto1.html">
+                        <img src="../img/budadia.png" class="card-img-top" alt="Lámpara de sal Buda">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Lámpara de sal Buda</h5>
+                        <p class="card-text">Descripción breve de la lámpara de sal Buda...</p>
+                        <a href="./producto1.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto">
-                <a href="../pages/producto3.html">
-                    <img src="../img/cuarzo.png" alt="Collar de cuarzo">
-                </a>
-                <h3>Collar de cuarzo</h3>
-                <p>Descripción breve del collar de cuarzo...</p>
-                <a href="../pages/producto3.html">Ver más</a>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto2.html">
+                        <img src="../img/sahumerios.png" class="card-img-top" alt="Sahumerios">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Sahumerios</h5>
+                        <p class="card-text">Descripción breve de los sahumerios...</p>
+                        <a href="../pages/producto2.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto">
-                <a href="../pages/producto4.html">
-                    <img src="../img/esferas.png" alt="Esferas magicas Premium x4">
-                </a>
-                <h3>Esferas magicas</h3>
-                <p>Descripción breve de Esferas magicas...</p>
-                <a href="../pages/producto4.html">Ver más</a>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto3.html">
+                        <img src="../img/cuarzo.png" class="card-img-top" alt="Collar de cuarzo">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Collar de cuarzo</h5>
+                        <p class="card-text">Descripción breve del collar de cuarzo...</p>
+                        <a href="../pages/producto3.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto">
-                <a href="../pages/producto5.html">
-                    <img src="../img/hornivela.png" alt="Hornivela">
-                </a>
-                <h3>Hornitos, velas y esencias</h3>
-                <p>Descripción breve de hornitos, velas...</p>
-                <a href="../pages/producto5.html">Ver más</a>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto4.html">
+                        <img src="../img/esferas.png" class="card-img-top" alt="Esferas magicas Premium x4">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Esferas mágicas</h5>
+                        <p class="card-text">Descripción breve de Esferas mágicas...</p>
+                        <a href="../pages/producto4.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto">
-                <a href="../pages/producto6.html">
-                    <img src="../img/portasahu.png" alt="Portasahu">
-                </a>
-                <h3>Porta Sahumerio</h3>
-                <p>Descripción breve de Portasahumerios...</p>
-                <a href="../pages/producto6.html">Ver más</a>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto5.html">
+                        <img src="../img/hornivela.png" class="card-img-top" alt="Hornivela">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Hornitos, velas y esencias</h5>
+                        <p class="card-text">Descripción breve de hornitos, velas...</p>
+                        <a href="../pages/producto5.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
-
-            <div class="producto">
-                <a href="../pages/producto7.html">
-                    <img src="../img/lamparasdesal.png" alt="Lampara de Sal">
-                </a>
-                <h3>Lampara de Sal</h3>
-                <p>Descripción breve de Lampara de Sal...</p>
-                <a href="../pages/producto7.html">Ver más</a>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto6.html">
+                        <img src="../img/portasahu.png" class="card-img-top" alt="Portasahu">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Porta Sahumerio</h5>
+                        <p class="card-text">Descripción breve de Portasahumerios...</p>
+                        <a href="../pages/producto6.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <a href="../pages/producto7.html">
+                        <img src="../img/lamparasdesal.png" class="card-img-top" alt="Lampara de Sal">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">Lámpara de Sal</h5>
+                        <p class="card-text">Descripción breve de Lámpara de Sal...</p>
+                        <a href="../pages/producto7.html" class="btn btn-primary">Ver más</a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>Derechos Reservados &copy; 2024</p>
-        <a href="#">Volver al Inicio</a> 
+        <a href="#" class="text-white">Volver al Inicio</a>
     </footer>
-    <script src="./js/menu.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
+    <script src="../js/menu.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

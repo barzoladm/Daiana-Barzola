@@ -3,73 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Manantial</title>
+    <title>El Manantial SL</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">El Manantial</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/proddisponibles.html">Productos disponibles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/contacto.html">Contacto</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/nosotros.html">Sobre nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./pages/redes.html">Nuestras redes</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand header-title" href="index.html">El Manantial SL</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/proddisponibles.html">Productos disponibles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/redes.html">Nuestras redes</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <div class="container">
-        <img src="./img/inicio.png" alt="" class="inicio-img">
+    <section class="search-section">
+        <form action="/search" method="get" class="search-form">
+            <input type="search" name="q" id="search-input" placeholder="Buscar..." class="form-control search-input">
+            <button type="button" id="search-button" class="btn btn-outline-success search-button">Buscar</button>
+        </form>
+        <div id="searchResults"></div>
+    </section>
+
+    <div class="container mt-4">
+        <img src="./img/inicio.png" alt="" class="inicio-img img-fluid">
         <section id="productos-disponibles">
-            <h2>Mas vendidos</h2>
-            <div class="productos-container" id="grid-container">
-                <div class="producto">
-                    <img src="./img/budadia.png" alt="Lámpara de sal - Buda">
-                    <h3>Lámpara de sal - Buda</h3>
-                    <p>🪔✨Las lámparas de sal son una hermosa opción para decorar tu rincón favorito.✨🪔</p>
-                    <a href="./pages/producto1.html">Ver más</a>
+            <h2>Más vendidos</h2>
+            <div class="row" id="grid-container">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="./img/budadia.png" class="card-img-top" alt="Lámpara de sal - Buda">
+                        <div class="card-body">
+                            <h5 class="card-title">Lámpara de sal - Buda</h5>
+                            <p class="card-text">🪔✨Las lámparas de sal son una hermosa opción para decorar tu rincón favorito.✨🪔</p>
+                            <a href="./pages/producto1.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
                 </div>
-                
-                <div class="producto">
-                    <img src="./img/sahumerios.png" alt="Sahumerios">
-                    <h3>Sahumerios</h3>
-                    <p>✨NUEVA presentación Sahumerios / Línea Artesano x5✨</p>
-                    <a href="./pages/producto2.html">Ver más</a>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="./img/sahumerios.png" class="card-img-top" alt="Sahumerios">
+                        <div class="card-body">
+                            <h5 class="card-title">Sahumerios</h5>
+                            <p class="card-text">✨NUEVA presentación Sahumerios / Línea Artesano x5✨</p>
+                            <a href="./pages/producto2.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="producto">
-                    <img src="./img/cuarzo.png" alt="Collar cuarzo cristal">
-                    <h3>Collar cuarzo cristal</h3>
-                    <p>✨NUEVos collares✨</p>
-                    <a href="./pages/producto3.html">Ver más</a>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="./img/cuarzo.png" class="card-img-top" alt="Collar cuarzo cristal">
+                        <div class="card-body">
+                            <h5 class="card-title">Collar cuarzo cristal</h5>
+                            <p class="card-text">✨NUEVos collares✨</p>
+                            <a href="./pages/producto3.html" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
-    <footer>
+    <footer class="bg-dark text-white text-center py-3">
         <p>Derechos Reservados &copy; 2024</p>
-        <a href="#">Volver al Inicio</a> 
+        <a href="#" class="text-white">Volver al Inicio</a>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>   
     <script src="./js/menu.js"></script>
     <script src="./js/script.js"></script>
 </body>
