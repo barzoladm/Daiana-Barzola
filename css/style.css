@@ -592,3 +592,6 @@ iframe {
         display: flex;
     }
 }
+.nav-list.active {
+    display: flex;
+}
