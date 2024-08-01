@@ -12,27 +12,32 @@ const productos = [
 // Función para mostrar los productos en la grilla
 function mostrarProductos(productos) {
     const gridContainer = document.getElementById('grid-container');
-    gridContainer.innerHTML = ''; 
+    if (gridContainer) {
+        gridContainer.innerHTML = ''; 
 
-    if (productos.length === 0) {
-        const mensaje = document.createElement('p');
-        mensaje.textContent = "Producto no encontrado";
-        gridContainer.appendChild(mensaje);
+        if (productos.length === 0) {
+            const mensaje = document.createElement('p');
+            mensaje.textContent = "Producto no encontrado";
+            gridContainer.appendChild(mensaje);
+        } else {
+            productos.forEach(producto => {
+                const div = document.createElement('div');
+                div.className = 'producto';
+                div.innerHTML = `
+                    <img src="${producto.img}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <a href="${producto.link}" target="_blank">Ver más</a>
+                `;
+                gridContainer.appendChild(div);
+            });
+        }
     } else {
-        productos.forEach(producto => {
-            const div = document.createElement('div');
-            div.className = 'producto';
-            div.innerHTML = `
-                <img src="${producto.img}" alt="${producto.nombre}">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.descripcion}</p>
-                <a href="${producto.link}" target="_blank">Ver más</a>
-            `;
-            gridContainer.appendChild(div);
-        });
+        console.error('Elemento #grid-container no encontrado');
     }
 }
 
+// Función para filtrar productos
 function filtrarProductos() {
     const termino = document.getElementById('search-input').value.toLowerCase();
     const productosFiltrados = productos.filter(producto => 
@@ -41,67 +46,35 @@ function filtrarProductos() {
     );
     mostrarProductos(productosFiltrados);
 }
-document.addEventListener('DOMContentLoaded', function() {
-});
-document.getElementById('search-input').addEventListener('input', filtrarProductos);
 
-document.getElementById('search-button').addEventListener('click', filtrarProductos);
-
-document.getElementById('search-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    filtrarProductos();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenu = document.getElementById('mobile-menu');
-    if (mobileMenu) {
-        mobileMenu.addEventListener('click', function() {
-            const nav = document.querySelector('.nav-list');
-            nav.classList.toggle('active');
-        });
-    } else {
-        console.error('Element with ID "mobile-menu" not found.');
-    }
-});
-
+// Esperar a que el DOM se cargue antes de añadir event listeners
 document.addEventListener('DOMContentLoaded', function() {
     const searchButton = document.getElementById('search-button');
     const searchInput = document.getElementById('search-input');
-    const resultados = document.getElementById('searchResults');
+    const searchForm = document.getElementById('search-form');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (searchButton && searchInput && resultados) {
-        searchButton.addEventListener('click', function() {
-            filtrarProductos(searchInput.value);
+    if (searchButton && searchInput && searchForm) {
+        searchButton.addEventListener('click', filtrarProductos);
+        searchInput.addEventListener('input', filtrarProductos);
+        searchForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            filtrarProductos();
         });
+    } else {
+        console.error('Uno o más elementos del formulario de búsqueda no se encontraron');
+    }
 
-        searchInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                filtrarProductos(searchInput.value);
+    if (mobileMenu) {
+        mobileMenu.addEventListener('click', function() {
+            const nav = document.querySelector('.nav-list');
+            if (nav) {
+                nav.classList.toggle('active');
+            } else {
+                console.error('Elemento .nav-list no encontrado');
             }
         });
-    }
-
-    function filtrarProductos(query) {
-        // Aquí puedes hacer la lógica para filtrar los productos
-        // Por simplicidad, vamos a usar un array de productos de ejemplo
-        const productos = [
-            { nombre: 'Producto 1' },
-            { nombre: 'Producto 2' },
-            { nombre: 'Producto 3' }
-        ];
-
-        const resultadosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(query.toLowerCase()));
-        mostrarProductos(resultadosFiltrados);
-    }
-
-    function mostrarProductos(productos) {
-        if (resultados) {
-            resultados.innerHTML = ''; // Limpia los resultados anteriores
-            productos.forEach(producto => {
-                resultados.innerHTML += `<div>${producto.nombre}</div>`;
-            });
-        } else {
-            console.error('Elemento #searchResults no encontrado');
-        }
+    } else {
+        console.error('Elemento #mobile-menu no encontrado');
     }
 });

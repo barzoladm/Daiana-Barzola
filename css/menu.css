@@ -1,6 +1,11 @@
+/* Estilos para el menú hamburguesa */
 .menu-toggle {
     display: none; /* Ocultar el menú hamburguesa por defecto en pantallas grandes */
     cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
 }
 
 .menu-bar {
@@ -23,13 +28,10 @@
     transform: translateY(-6px) rotate(-45deg);
 }
 
+/* Estilos para el menú en pantallas pequeñas */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block; /* Mostrar el menú hamburguesa en pantallas más pequeñas */
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 1000;
+        display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
     }
 
     nav {
@@ -47,6 +49,7 @@
     }
 
     nav.active {
+        display: block; /* Mostrar el menú cuando esté activo */
         transform: translateX(0);
     }
 
@@ -71,4 +74,3 @@
         font-size: 18px;
     }
 }
-

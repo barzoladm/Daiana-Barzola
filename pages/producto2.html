@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto 2 - Detalles</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>✨NUEVA presentación Sahumerios / Línea Artesano x5✨</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./proddisponibles.html">Productos disponibles</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                <li><a href="./redes.html">Nuestras redes</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">El Manantial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proddisponibles.html">Productos disponibles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./redes.html">Nuestras redes</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+        <h1 class="text-center">✨NUEVA presentación Sahumerios / Línea Artesano x5✨</h1>
     </header>
 
-    <main class="container">
-        <img src="../img/sahumerios.png" alt="Sahumerios">
+    <main class="container mt-4">
+        <img src="../img/sahumerios.png" alt="Sahumerios" class="img-fluid">
         <p>🪔✨ Los mejores aromas en nuevos packs de 5 varillas. Te contamos qué podés intencionar con cada aroma ✨🪔</p>
         <ul>
             <li>✨ Palo Santo: Armonía y Bienestar</li>
@@ -30,7 +49,7 @@
             <li>✨ Palo Santo con Lavanda: Armonía y Relajación</li>
             <li>✨ Incienso: Limpieza y Renovación</li>
             <li>✨ Palo Santo con Incienso: Prosperidad</li>
-            <li>✨ Yagra: Abundancia</li>          
+            <li>✨ Yagra: Abundancia</li>
             <li>✨ Ruda, Romero e Incienso: Equilibrio Emocional</li>
             <li>✨ Palo Santo con Ruda: Protección</li>
             <li>✨ Palo Santo con Pachuli: Paz Interior</li>
@@ -39,9 +58,13 @@
         </ul>
     </main>
 
-    <footer>
+    <footer class="text-center py-3">
         <a href="../index.html">Volver al Inicio</a>
     </footer>
-    <script src="./js/menu.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>
