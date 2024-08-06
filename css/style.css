@@ -746,3 +746,15 @@ iframe {
         font-size: 18px;
     }
 }
+.navbar-collapse {
+    position: relative;
+    width: 100%;
+}
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+.navbar-nav li {
+    display: inline-block;
+    float: none;
+}
