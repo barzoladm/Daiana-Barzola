@@ -4,32 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Producto 3 - Detalles</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Enlace a tu archivo CSS personalizado -->
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <h1>Cuarzo cristal</h1>
-        <nav>
-            <ul class="nav-list">
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./proddisponibles.html">Productos disponibles</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-                <li><a href="./nosotros.html">Sobre nosotros</a></li>
-                <li><a href="./redes.html">Nuestras redes</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <a class="navbar-brand" href="../index.html">El Manantial</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./proddisponibles.html">Productos disponibles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Sobre nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./redes.html">Nuestras redes</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
+        <h1 class="text-center mt-4">Cuarzo cristal</h1>
     </header>
 
-    <main class="container">
-        <img src="../img/cuarzo.png" alt="Cuarzo cristal">
+    <main class="container mt-4">
+        <img src="../img/cuarzo.png" alt="Cuarzo cristal" class="img-fluid">
         <p>💎 El cuarzo blanco o transparente es uno de los más poderosos 💎</p>
         <p>💎 Gracias a sus propiedades purificadoras, que ayudan a eliminar las malas energías del cuerpo, incluso cuando no somos conscientes de ellas 💎</p>
         <p>💎 Es uno de los cristales más valorados espiritualmente, gracias a sus propiedades purificadoras y protectoras, que contribuyen a eliminar las energías negativas del cuerpo. 💎</p>
     </main>
 
-    <footer>
+    <footer class="text-center py-3">
         <a href="../index.html">Volver al Inicio</a>
     </footer>
-    <script src="./js/menu.js"></script>
+
+    <!-- Scripts de Bootstrap y jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
 </body>
 </html>

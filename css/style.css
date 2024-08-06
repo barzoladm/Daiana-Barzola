@@ -670,7 +670,7 @@ iframe {
     }
 
     .menu-toggle {
-        display: flex;
+        display: center;
     }
 }
 
@@ -701,7 +701,7 @@ iframe {
 
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* Mostrar el menú hamburguesa en pantallas más pequeñas */
+        display: center; /* Mostrar el menú hamburguesa en pantallas más pequeñas */
         position: fixed;
         top: 20px;
         right: 20px;
